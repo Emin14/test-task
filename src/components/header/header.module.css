@@ -1,0 +1,28 @@
+.header {
+   padding: 10px 0;
+   background-color: rgb(255, 255, 255);
+   margin: 16px 0;
+}
+
+.container {
+   max-width: 1240px;
+   padding: 0 30px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.list {
+display: flex;
+gap: 40px;
+}
+
+.list li{
+   cursor: pointer;
+   }
+
+.list li:hover{
+   color: rgb(177, 176, 176);
+   }
+      
