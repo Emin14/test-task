@@ -1,6 +1,6 @@
 import md5 from "md5";
 
-export const apiURL = "http://api.valantis.store:40000/";
+export const apiURL = "https://api.valantis.store:41000/";
 export const apiKey = "Valantis";
 
 export const timestamp = new Date()
