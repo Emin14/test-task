@@ -19,12 +19,12 @@
    transition: 375ms;
 }
 
-.active {
- background-color: #f2f3f7;
+.page:hover {
+   background-color: rgb(30, 30, 30);
+   color: #fff;
+   transition: 375ms;
 }
 
-.page:hover {
- background-color: rgb(30, 30, 30);
- color: #fff;
- transition: 375ms;
+.active {
+   background-color: #f2f3f7;
 }

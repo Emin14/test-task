@@ -38,7 +38,6 @@ export default function Filters() {
   function changeValue(e) {
     let { value } = e.target;
     const fieldTitle = e.target.name;
-    console.log(fieldTitle);
     if (fieldTitle === "price") value = Number(value);
     setSearchParams({ [fieldTitle]: value });
   }
@@ -46,7 +45,6 @@ export default function Filters() {
   function search(e) {
     e.preventDefault();
     dispatch(changeCurrentPage(1));
-    console.log(searchParams);
     dispatch(changeParams(searchParams));
     setSearchParams(clearingProperties(searchParams));
     setIsOpen(false);
@@ -74,28 +72,18 @@ export default function Filters() {
       <>
         <div
           onClick={closeModal}
-          className={
-            isOpen ? [styles.open, styles.modal].join(" ") : styles.modal
-          }
+          className={ isOpen ? [styles.openModal, styles.modal].join(" ") : styles.modal }
           id="modal"
         />
         <button className={styles.filterBtn} onClick={() => setIsOpen(!isOpen)}>
           Все фильтры
         </button>
-        <div
-          className={
-            isOpen ? [styles.open, styles.filter2].join(" ") : styles.filter2
-          }
-        >
-          <div className={styles.wrapper}>
+        <div className={ isOpen ? [styles.openFilter, styles.filter].join(" ") : styles.filter } >
+          <div className={styles.header}>
             <h2>Фильтр</h2>
             <div
               onClick={closeModal}
-              className={
-                isHover
-                  ? [styles.burger, styles.hover].join(" ")
-                  : styles.burger
-              }
+              className={ isHover  ? [styles.burger, styles.hover].join(" ")  : styles.burger }
               id="cross"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseEnter}
@@ -103,7 +91,7 @@ export default function Filters() {
               <span />
             </div>
           </div>
-          <form className={styles.filter} onSubmit={search}>
+          <form className={styles.form} onSubmit={search}>
             {properties.map((item) => (
               <Fragment key={item}>
                 <h2 className={styles.title}>{translate[item]}</h2>
@@ -115,9 +103,8 @@ export default function Filters() {
                     onChange={changeValue}
                     name={item}
                   />
-                ) : (
-                  ""
-                )}
+                ) 
+                : "" }
                 {item === "price" ? (
                   <>
                     <input

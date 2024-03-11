@@ -14,15 +14,15 @@
 }
 
 .list {
-display: flex;
-gap: 40px;
+   display: flex;
+   gap: 40px;
 }
 
 .list li{
    cursor: pointer;
-   }
+}
 
 .list li:hover{
    color: rgb(177, 176, 176);
-   }
+}
       

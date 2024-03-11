@@ -24,10 +24,7 @@ export default function Pagination({ pages, currentPage, isLoading }) {
               >
                 {page}
               </span>
-            ) : (
-              ""
-            ),
-          )}
+            ) : "" )}
       </div>
     );
   }
