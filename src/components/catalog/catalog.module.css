@@ -29,3 +29,24 @@
   font-size: 16px;
   font-weight: 300;
 }
+
+@media (max-width: 1200px) {
+  .block {
+    grid-template-rows: 2.5fr 1fr 1fr 1fr;
+  }
+  .title, .price {
+    font-size: 16px;
+  }
+  .id {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .block {
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+  }
+  .catalog {
+    grid-template-columns: repeat(auto-fill, 260px);
+  }
+}
