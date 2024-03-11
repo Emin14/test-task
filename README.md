@@ -2,7 +2,7 @@
 
 ## Description
 
-Test task from Valantis. [Demo](https://test-task-alpha-six.vercel.app/)
+Test task from Valantis. Demo: [https://test-task-alpha-six.vercel.app/](https://test-task-alpha-six.vercel.app/)
 
 ## Preview
 
