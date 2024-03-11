@@ -26,8 +26,41 @@ button {
 ul {
   list-style-type: none;
   margin: 0;
+  padding: 0;
 }
 
 p {
   margin: 0;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .banner {
+    width: 304px;
+  }
+}  
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .banner {
+    width: 164px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .banner {
+    width: 124px;
+  }
+}
+
+@media (max-width: 576px) {
+  .asteroidImg {
+    width: 50%;;
+  }
 }
