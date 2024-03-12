@@ -27,6 +27,10 @@
    color: rgb(177, 176, 176);
 }
 
+.logo {
+   cursor: pointer;
+}
+
 @media (max-width: 1200px) {
    .list {
       gap: 30px;
