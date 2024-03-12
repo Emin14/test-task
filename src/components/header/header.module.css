@@ -29,6 +29,7 @@
 
 .logo {
    cursor: pointer;
+   -webkit-tap-highlight-color: transparent;
 }
 
 @media (max-width: 1200px) {
