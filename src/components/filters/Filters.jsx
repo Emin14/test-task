@@ -22,7 +22,9 @@ export default function Filters() {
   } = useGetFieldQuery();
 
   useEffect(() => {
-    if (isErrorFiels) getFieldRefetch();
+    if (isErrorFiels) {
+      getFieldRefetch()
+    };
   }, [isErrorFiels, getFieldRefetch]);
 
   const {
@@ -32,7 +34,9 @@ export default function Filters() {
   } = useGetBrandsQuery();
 
   useEffect(() => {
-    if (isErrorBrands) getBrandsRefetch();
+    if (isErrorBrands) {
+      getBrandsRefetch()
+    };
   }, [isErrorBrands, getBrandsRefetch]);
 
   function changeValue(e) {

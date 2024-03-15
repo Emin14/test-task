@@ -21,10 +21,12 @@ export default function Board() {
   } = useGetPagesQuery();
 
   useEffect(() => {
-    if (isErrorPages) getPagesRefetch();
+    if (isErrorPages) {
+      getPagesRefetch()
+    }
   }, [isErrorPages, getPagesRefetch]);
 
-  // Получаем количество элементов при фильтрации
+  // Получаем id элементов при фильтрации
   const {
     data: ids,
     isFetching: isFetchingGetId,
@@ -33,7 +35,9 @@ export default function Board() {
   } = useGetIdsQuery({ currentPage, limit, params });
 
   useEffect(() => {
-    if (isErrorIds) getIdsRefetch();
+    if (isErrorIds) {
+      getIdsRefetch()
+    }
   }, [isErrorIds, getIdsRefetch]);
 
   const pages = convertingToArrayPages(
@@ -41,6 +45,7 @@ export default function Board() {
     limit,
   );
 
+    // Получаем продукты на основе id
   const {
     data,
     isLoading,
@@ -52,7 +57,9 @@ export default function Board() {
   });
 
   useEffect(() => {
-    if (isErrorProducts) getProductsRefetch();
+    if (isErrorProducts) {
+      getProductsRefetch()
+    }
   }, [isErrorProducts, getProductsRefetch]);
 
   const productsArray = {};
