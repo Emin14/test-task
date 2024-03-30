@@ -5,7 +5,6 @@ import { clearParams } from "../../redux/slices/paramsSlice";
 import styles from "./header.module.css";
 
 export default function Header() {
-
   const dispatch = useDispatch();
 
   function handleClick() {
@@ -16,7 +15,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <img  className={styles.logo} src={logo} alt="" onClick={handleClick}/>
+        <img className={styles.logo} src={logo} alt="" onClick={handleClick} />
         <ul className={styles.list}>
           <li>Каталог</li>
           <li>Займ</li>

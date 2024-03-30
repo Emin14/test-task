@@ -16,7 +16,7 @@ export const productsApi = createApi({
         },
         body: {
           action: "get_items",
-          params: { ids: ids },
+          params: { ids },
         },
       }),
       transformResponse: (response) => removeDuplicates(response.result),

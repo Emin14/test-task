@@ -1,31 +1,31 @@
 .pagination {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
 }
 
 .page {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 43px;
-   min-width: 43px;
-   border-radius: 50%;
-   margin: 5px;
-   font-size: 18px;
-   color: rgb(30, 30, 30);
-   cursor: pointer;
-   transition: 375ms;
-   -webkit-tap-highlight-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 43px;
+  min-width: 43px;
+  border-radius: 50%;
+  margin: 5px;
+  font-size: 18px;
+  color: rgb(30, 30, 30);
+  cursor: pointer;
+  transition: 375ms;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .page:hover {
-   background-color: rgb(30, 30, 30);
-   color: #fff;
-   transition: 375ms;
+  background-color: rgb(30, 30, 30);
+  color: #fff;
+  transition: 375ms;
 }
 
 .active {
-   background-color: #f2f3f7;
+  background-color: #f2f3f7;
 }

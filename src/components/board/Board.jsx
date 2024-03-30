@@ -22,11 +22,11 @@ export default function Board() {
 
   useEffect(() => {
     if (isErrorPages) {
-      getPagesRefetch()
+      getPagesRefetch();
     }
   }, [isErrorPages, getPagesRefetch]);
 
-  // Получаем id элементов при фильтрации
+  // Получаем id элементов
   const {
     data: ids,
     isFetching: isFetchingGetId,
@@ -36,7 +36,7 @@ export default function Board() {
 
   useEffect(() => {
     if (isErrorIds) {
-      getIdsRefetch()
+      getIdsRefetch();
     }
   }, [isErrorIds, getIdsRefetch]);
 
@@ -45,7 +45,7 @@ export default function Board() {
     limit,
   );
 
-    // Получаем продукты на основе id
+  // Получаем продукты на основе id
   const {
     data,
     isLoading,
@@ -58,7 +58,7 @@ export default function Board() {
 
   useEffect(() => {
     if (isErrorProducts) {
-      getProductsRefetch()
+      getProductsRefetch();
     }
   }, [isErrorProducts, getProductsRefetch]);
 

@@ -15,7 +15,10 @@ export const idApi = createApi({
         },
         body: {
           action: params ? "filter" : "get_ids",
-          params: params || { offset: limit * (currentPage - 1), limit },
+          params: params || {
+            offset: limit * (currentPage - 1),
+            limit,
+          },
         },
       }),
       transformResponse: (response) => response.result,

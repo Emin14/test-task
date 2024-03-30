@@ -23,8 +23,8 @@ export default function Filters() {
 
   useEffect(() => {
     if (isErrorFiels) {
-      getFieldRefetch()
-    };
+      getFieldRefetch();
+    }
   }, [isErrorFiels, getFieldRefetch]);
 
   const {
@@ -35,8 +35,8 @@ export default function Filters() {
 
   useEffect(() => {
     if (isErrorBrands) {
-      getBrandsRefetch()
-    };
+      getBrandsRefetch();
+    }
   }, [isErrorBrands, getBrandsRefetch]);
 
   function changeValue(e) {
@@ -76,18 +76,30 @@ export default function Filters() {
       <>
         <div
           onClick={closeModal}
-          className={ isOpen ? [styles.openModal, styles.modal].join(" ") : styles.modal }
+          className={
+            isOpen ? [styles.openModal, styles.modal].join(" ") : styles.modal
+          }
           id="modal"
         />
         <button className={styles.filterBtn} onClick={() => setIsOpen(!isOpen)}>
           Все фильтры
         </button>
-        <div className={ isOpen ? [styles.openFilter, styles.filter].join(" ") : styles.filter } >
+        <div
+          className={
+            isOpen
+              ? [styles.openFilter, styles.filter].join(" ")
+              : styles.filter
+          }
+        >
           <div className={styles.header}>
             <h2>Фильтр</h2>
             <div
               onClick={closeModal}
-              className={ isHover  ? [styles.burger, styles.hover].join(" ")  : styles.burger }
+              className={
+                isHover
+                  ? [styles.burger, styles.hover].join(" ")
+                  : styles.burger
+              }
               id="cross"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseEnter}
@@ -103,17 +115,18 @@ export default function Filters() {
                   <input
                     className={styles.inputText}
                     type="text"
-                    value={searchParams[item]}
+                    value={searchParams[item] || ""}
                     onChange={changeValue}
                     name={item}
                   />
-                ) 
-                : "" }
+                ) : (
+                  ""
+                )}
                 {item === "price" ? (
                   <>
                     <input
                       type="range"
-                      value={searchParams[item]}
+                      value={searchParams[item] || ""}
                       min="1"
                       max="999999"
                       id="range"
@@ -126,7 +139,7 @@ export default function Filters() {
                       id="rangenumber"
                       min="0"
                       max="999999"
-                      value={searchParams[item]}
+                      value={searchParams[item] || ""}
                       onChange={changeValue}
                       name={item}
                     />
@@ -137,7 +150,7 @@ export default function Filters() {
                 {item === "brand" ? (
                   <select
                     className={styles.select}
-                    value={searchParams[item]}
+                    value={searchParams[item] || ""}
                     onChange={changeValue}
                     name={item}
                   >
